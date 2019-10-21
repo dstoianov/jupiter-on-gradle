@@ -1,0 +1,17 @@
+
+
+.Gradle
+
+1. Dependencies update check, add this lib to the project `id "com.github.ben-manes.versions" version "0.25.0"` https://https://github.com/ben-manes/gradle-versions-plugin[Gradle Versions Plugin]
+```groovy
+plugins {
+    id "com.github.ben-manes.versions" version "0.25.0"
+}
+```
+The commands:
+```shell
+./gradlew dependencyUpdates
+./gradlew dependencyUpdates -Drevision=release
+```
+* fdffff
+links to the doc:
