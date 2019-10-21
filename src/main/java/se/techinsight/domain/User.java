@@ -1,4 +1,4 @@
-package se.techinsight.pojo;
+package se.techinsight.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

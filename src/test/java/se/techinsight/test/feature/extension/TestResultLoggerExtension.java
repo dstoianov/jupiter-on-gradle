@@ -1,4 +1,4 @@
-package se.techinsight.test.feature.ex;
+package se.techinsight.test.feature.extension;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.extension.AfterAllCallback;

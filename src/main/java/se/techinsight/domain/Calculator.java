@@ -1,4 +1,4 @@
-package se.techinsight.pojo;
+package se.techinsight.domain;
 
 public class Calculator {
     public int add(int a, int b) {

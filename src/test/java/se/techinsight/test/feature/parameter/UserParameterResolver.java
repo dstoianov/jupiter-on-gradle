@@ -2,9 +2,8 @@ package se.techinsight.test.feature.parameter;
 
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.api.extension.ParameterContext;
-import org.junit.jupiter.api.extension.ParameterResolutionException;
 import org.junit.jupiter.api.extension.ParameterResolver;
-import se.techinsight.pojo.User;
+import se.techinsight.domain.User;
 
 public class UserParameterResolver implements ParameterResolver {
 
@@ -14,7 +13,7 @@ public class UserParameterResolver implements ParameterResolver {
     }
 
     @Override
-    public Object resolveParameter(ParameterContext parameterContext, ExtensionContext extensionContext) {
-        return null;
+    public User resolveParameter(ParameterContext parameterContext, ExtensionContext extensionContext) {
+        return new User("aaa", "bbb", 23);
     }
 }

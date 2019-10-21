@@ -1,4 +1,4 @@
-package se.techinsight.test;
+package se.techinsight.test.feature;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;

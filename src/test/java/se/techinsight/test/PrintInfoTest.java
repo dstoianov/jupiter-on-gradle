@@ -1,5 +1,5 @@
 
-package se.techinsight;
+package se.techinsight.test;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.DisplayName;
@@ -7,8 +7,9 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
+import se.techinsight.App;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @Slf4j
 class PrintInfoTest {

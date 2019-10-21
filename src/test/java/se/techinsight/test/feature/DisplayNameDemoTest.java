@@ -1,4 +1,4 @@
-package se.techinsight.test;
+package se.techinsight.test.feature;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

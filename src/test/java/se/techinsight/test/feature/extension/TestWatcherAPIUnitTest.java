@@ -1,12 +1,12 @@
-package se.techinsight.test.feature.ex;
-
-import static org.junit.jupiter.api.Assertions.fail;
+package se.techinsight.test.feature.extension;
 
 import org.junit.Assert;
 import org.junit.jupiter.api.Assumptions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+
+import static org.junit.jupiter.api.Assertions.fail;
 
 @ExtendWith(TestResultLoggerExtension.class)
 class TestWatcherAPIUnitTest {

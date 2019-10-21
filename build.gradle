@@ -16,6 +16,10 @@ plugins {
 group 'se.techinsight'
 version '1.0-SNAPSHOT'
 
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+
 repositories {
     // Use jcenter for resolving dependencies.
     // You can declare any Maven/Ivy/file repository here.
@@ -23,9 +27,7 @@ repositories {
 }
 
 dependencies {
-    //lombok
-    compileOnly 'org.projectlombok:lombok:1.18.10'
-    annotationProcessor 'org.projectlombok:lombok:1.18.10'
+
 
     //add Logback
     compile 'ch.qos.logback:logback-classic:1.2.3'
@@ -34,9 +36,29 @@ dependencies {
 
     // Use JUnit Jupiter API for testing.
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.2'
+    compile 'org.junit.jupiter:junit-jupiter-params:5.5.2'
+
     // Use JUnit Jupiter Engine for testing.
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.5.2'
 
+//    compile  'org.seleniumhq.selenium:selenium-java:3.141.59'
+
+
+//    testAnnotationProcessor 'org.projectlombok:lombok'
+//    testCompileOnly 'org.projectlombok:lombok'
+
+    //lombok
+//    compileOnly 'org.projectlombok:lombok:1.18.10'
+//    annotationProcessor 'org.projectlombok:lombok:1.18.10'
+
+    def lombokVersion = "1.18.10"
+    compileOnly "org.projectlombok:lombok:${lombokVersion}"
+    testCompileOnly "org.projectlombok:lombok:${lombokVersion}"
+    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+    testAnnotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+
+
+    testImplementation "com.google.truth:truth:1.0"
 
 }
 
@@ -45,6 +67,14 @@ dependencies {
 test {
     // Use junit platform for unit tests
     useJUnitPlatform()
+
+    testLogging.showStandardStreams = true
+//    maxParallelForks = (int) (Runtime.runtime.availableProcessors().intdiv(2) ?: 1)
+    systemProperty "com.google.common.truth.disable_stack_trace_cleaning", "true"
+
+//gradle test --tests "se.techinsight.test.PrintInfoTest"
+
+
 }
 
 tasks {
