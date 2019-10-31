@@ -15,3 +15,28 @@ The commands:
 ```
 * fdffff
 links to the doc:
+
+## Junit 5. Description
+
+.JUnit 5 can be extended via:
+1. Extensions (for example `@ExtendWith()` - for Class or Test method)
+- Test Instance Post Processor (DI in Junit5)
+- Parameter Resolver (injection to methods / in tests)
+1. Not Extensions
+- Argument Aggregator
+- Argument Converter
+
+for multithred using
+- use only local variables
+- and ExtensionContext or
+- use ThreadLocal fields (e.g. WebDriver) or
+- register Extension level instance like non-static fields (via annotation @RegisterEctention)
+
+
+
+DI support in JUnit 5
+
+.What is DI?
+- move logic of creating the object somewhere via some mechanism in Junit 5 this is a `dependency resolver`
+- you declaratively describe your object in the test
+

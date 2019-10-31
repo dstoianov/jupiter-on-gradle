@@ -8,7 +8,9 @@
 
 plugins {
     id 'java'
+    id 'groovy'
     id "com.github.ben-manes.versions" version "0.27.0"
+//    id 'com.adarshr.test-logger' version '2.0.0'
 }
 
 
@@ -16,8 +18,8 @@ plugins {
 group 'se.techinsight'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
 
 
 repositories {
@@ -28,11 +30,27 @@ repositories {
 
 dependencies {
 
+    implementation 'org.codehaus.groovy:groovy-all:2.5.8'
+    implementation 'com.github.javafaker:javafaker:1.0.1'
+
+    compile 'com.squareup.retrofit2:retrofit:2.6.2'
+    compile 'com.squareup.retrofit2:converter-jackson:2.6.2'
+    compile 'com.squareup.retrofit2:converter-gson:2.6.2'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.2.2'
+
+
 
     //add Logback
     compile 'ch.qos.logback:logback-classic:1.2.3'
     compile 'ch.qos.logback:logback-core:1.2.3'
+    compile 'org.slf4j:jul-to-slf4j:1.7.28'
     compile 'org.slf4j:slf4j-api:1.7.28'
+//    implementation 'org.slf4j:slf4j-simple:1.7.28'
+
+
+    compile "com.jcraft:jsch:0.1.55"
+    compile "commons-io:commons-io:2.6"
+
 
     // Use JUnit Jupiter API for testing.
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.2'
@@ -74,6 +92,10 @@ test {
 
 //gradle test --tests "se.techinsight.test.PrintInfoTest"
 
+//    testLogging {
+//        events "passed", "skipped", "failed"
+//    }
+
 
 }
 
@@ -82,3 +104,21 @@ tasks {
         checkConstraints = true
     }
 }
+
+//testlogger {
+//    theme 'standard'
+//    showExceptions false
+//    showStackTraces false
+//    showFullStackTraces false
+//    showCauses true
+//    slowThreshold 2000
+//    showSummary true
+//    showSimpleNames false
+//    showPassed true
+//    showSkipped true
+//    showFailed true
+//    showStandardStreams false
+//    showPassedStandardStreams true
+//    showSkippedStandardStreams true
+//    showFailedStandardStreams true
+//}
