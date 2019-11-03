@@ -33,23 +33,27 @@ dependencies {
     implementation 'org.codehaus.groovy:groovy-all:2.5.8'
     implementation 'com.github.javafaker:javafaker:1.0.1'
 
-    compile 'com.squareup.retrofit2:retrofit:2.6.2'
-    compile 'com.squareup.retrofit2:converter-jackson:2.6.2'
-    compile 'com.squareup.retrofit2:converter-gson:2.6.2'
+    implementation 'com.squareup.retrofit2:retrofit:2.6.2'
+    implementation 'com.squareup.retrofit2:converter-jackson:2.6.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
     implementation 'com.squareup.okhttp3:logging-interceptor:4.2.2'
+
+    compile 'org.postgresql:postgresql:42.2.8'
 
 
 
     //add Logback
-    compile 'ch.qos.logback:logback-classic:1.2.3'
-    compile 'ch.qos.logback:logback-core:1.2.3'
-    compile 'org.slf4j:jul-to-slf4j:1.7.28'
-    compile 'org.slf4j:slf4j-api:1.7.28'
+    implementation 'ch.qos.logback:logback-classic:1.2.3'
+    implementation 'ch.qos.logback:logback-core:1.2.3'
+    implementation 'org.slf4j:jul-to-slf4j:1.7.28'
+    implementation 'org.slf4j:slf4j-api:1.7.28'
 //    implementation 'org.slf4j:slf4j-simple:1.7.28'
 
 
-    compile "com.jcraft:jsch:0.1.55"
-    compile "commons-io:commons-io:2.6"
+    // SSH
+    implementation "com.jcraft:jsch:0.1.55"
+    implementation "commons-io:commons-io:2.6"
+    implementation 'com.aestasit.infrastructure.sshoogr:sshoogr:0.9.26'
 
 
     // Use JUnit Jupiter API for testing.

@@ -11,6 +11,9 @@ class SshEngineTest {
     void simpleTest() {
         new SshDslEngine().remoteSession {
             url = connectionString
+            exec 'w'
+            exec 'pwd'
+            exec 'ping -c 1 google.com'
             exec 'groovy --version'
             exec 'groovy -e "println \'Hello, Remote!\'"'
         }
