@@ -23,6 +23,7 @@ class SshDslEngine {
                 try {
                     delegate.session.disconnect()
                 } catch (Exception e) {
+                    println e
                 }
             }
         }

@@ -30,8 +30,13 @@ class RemoteSession extends RemoteSessionData {
             }
             session = jsch.getSession(username, host, port)
             session.password = password
-            println ">>> Connecting to $host"
-            session.connect()
+            println ">>> Connecting to '$host' as '$username'"
+            try {
+                session.connect()
+            } catch (JSchException e) {
+                println e.message == "Auth fail" ? "Credentials are incorrect!!!" : e
+                throw new RuntimeException('Username or Password are incorrect')
+            }
         }
     }
 
