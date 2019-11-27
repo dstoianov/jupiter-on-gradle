@@ -16,6 +16,15 @@ The commands:
 * fdffff
 links to the doc:
 
+gradle init --dsl groovy --type java-application --test-framework junit-jupiter \ --package com.raisin \ --project-name distribution-portal-test
+
+
+
+
+gradle init --type groovy-library --test-framework junit-jupiter --package com.raisin gradle init --type java-library --type groovy-library --test-framework junit-jupiter
+
+git@gitlab.raisin.systems:dstoianov/distribution-portal-test.git
+
 ## Junit 5. Description
 
 .JUnit 5 can be extended via:
@@ -39,4 +48,6 @@ DI support in JUnit 5
 .What is DI?
 - move logic of creating the object somewhere via some mechanism in Junit 5 this is a `dependency resolver`
 - you declaratively describe your object in the test
+
+https://asciidoctor.org/docs/user-manual/#comparison-by-example
 
