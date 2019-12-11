@@ -9,7 +9,13 @@
 plugins {
     id 'java'
     id 'groovy'
-    id "com.github.ben-manes.versions" version "0.27.0"
+//    id "com.github.ben-manes.versions" version "0.27.0"
+    id "name.remal.check-updates" version "1.0.157"
+//    id "name.remal.check-dependency-updates" version "1.0.157"
+//    id "io.beekeeper.gradle.plugins.dependency-updates" version "0.7.11"
+
+
+
 //    id 'com.adarshr.test-logger' version '2.0.0'
 }
 
@@ -25,7 +31,8 @@ targetCompatibility = JavaVersion.VERSION_1_8
 repositories {
     // Use jcenter for resolving dependencies.
     // You can declare any Maven/Ivy/file repository here.
-    jcenter()
+//    jcenter()
+    mavenCentral()
 }
 
 dependencies {
@@ -38,15 +45,15 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
     implementation 'com.squareup.okhttp3:logging-interceptor:4.2.2'
 
-    compile 'org.postgresql:postgresql:42.2.8'
+    implementation 'org.postgresql:postgresql:42.2.8'
 
 
 
     //add Logback
     implementation 'ch.qos.logback:logback-classic:1.2.3'
     implementation 'ch.qos.logback:logback-core:1.2.3'
-    implementation 'org.slf4j:jul-to-slf4j:1.7.28'
-    implementation 'org.slf4j:slf4j-api:1.7.28'
+    implementation 'org.slf4j:jul-to-slf4j:1.7.29'
+    implementation 'org.slf4j:slf4j-api:1.7.29'
 //    implementation 'org.slf4j:slf4j-simple:1.7.28'
 
 
@@ -58,7 +65,7 @@ dependencies {
 
     // Use JUnit Jupiter API for testing.
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.2'
-    compile 'org.junit.jupiter:junit-jupiter-params:5.5.2'
+    implementation 'org.junit.jupiter:junit-jupiter-params:5.5.2'
 
     // Use JUnit Jupiter Engine for testing.
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.5.2'
@@ -103,11 +110,6 @@ test {
 
 }
 
-tasks {
-    dependencyUpdates {
-        checkConstraints = true
-    }
-}
 
 //testlogger {
 //    theme 'standard'

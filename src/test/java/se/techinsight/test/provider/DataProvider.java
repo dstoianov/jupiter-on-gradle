@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 
 public class DataProvider {
 
-    private static Stream<Arguments> provideStringsForIsBlank() {
+    static Stream<Arguments> provideStringsForIsBlank() {
         return Stream.of(
                 Arguments.of(null, true),
                 Arguments.of("", true),

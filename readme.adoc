@@ -27,13 +27,15 @@ git@gitlab.raisin.systems:dstoianov/distribution-portal-test.git
 
 ## Junit 5. Description
 
-.JUnit 5 can be extended via:
+https://www.youtube.com/watch?v=DAszLeWMsqU[Дмитрий Тучс — JUnit, дай пять! Переносим код в JUnit 5 Extensions]
+
+.JUnit 5 can be extended via (several interfaces):
 1. Extensions (for example `@ExtendWith()` - for Class or Test method)
 - Test Instance Post Processor (DI in Junit5)
-- Parameter Resolver (injection to methods / in tests)
-1. Not Extensions
-- Argument Aggregator
+- Parameter Resolver (injection to methods / in tests) `class AAA implements ParameterResolver {`
+1. Not an Extensions but logically yes
 - Argument Converter
+- Argument Aggregator
 
 for multithred using
 - use only local variables
